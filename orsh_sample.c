@@ -7,7 +7,7 @@ int main(){
   char *cmd = "exit";
 
   do{
-    printf("[root@localhost /]# ");
+    printf("(user@localhost /)# ");
     // fgets(line, sizeof(line), stdin);
 
     if( strcmp( line, cmd) == 0){
