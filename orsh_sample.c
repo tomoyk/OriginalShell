@@ -5,16 +5,21 @@ int main(){
 
   char *line;
   char *cmd = "exit";
+  char *zero, *param;
 
-  do{
+  while(1) {
     printf("(user@localhost /)# ");
+    fgets(line, sizeof(line), stdin);
     // fgets(line, sizeof(line), stdin);
 
-    if( strcmp( line, cmd) == 0){
+    zero=strtok_r(line, " \r\n\t", &param);
+
+    if( zero==NULL ){
+      continue;
+    }else if( strcmp(zero, cmd)==0 ){
       return 0;
     }
-
-  }while(fgets(line, sizeof(line), stdin) );
+  }
 
   return 0;
 }
