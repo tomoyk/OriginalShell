@@ -4,11 +4,16 @@
 
 // int create(const char *name, mode_t mode);
 
-char *file = "/home/test01/aa";
+int main(void){
 
-int fd;
-fd = create(file, 0644);
+  char *file = "/home/test01/aa";
 
-int fdA;
-fdA = create(file, O_WONLY | O_CREAT | O_TRUNC, 0644);
+  int fd;
+  fd = create(file, 0644);
 
+  int fdA;
+  fdA = create(file, O_WONLY | O_CREAT | O_TRUNC, 0644);
+
+  return(0);
+
+}
