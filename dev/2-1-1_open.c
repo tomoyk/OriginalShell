@@ -11,7 +11,7 @@ int main(void){
   // int fd = open("/home/test01/aa", O_RDONLY | );
 
   // 書き込み用にオープン. ファイルが存在しない場合はエラー(O_CREATが無いため)
-  int fd = open("/home/test01/aa", O_WRONLY | O_TRUNC );
+  int fd = open("/root/hoge", O_WRONLY | O_TRUNC );
 
   if(fd == -1){
     // Error
